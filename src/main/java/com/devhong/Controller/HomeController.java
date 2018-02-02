@@ -1,4 +1,4 @@
-package com.devhong.portfolio;
+package com.devhong.Controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -34,6 +34,12 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
+	}
+	
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public String index(Model model) {
+		
+		return "index";
 	}
 	
 }
